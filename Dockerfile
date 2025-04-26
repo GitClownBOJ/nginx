@@ -17,6 +17,9 @@ RUN mkdir -p /var/log/nginx && \
 COPY scripts/ /usr/local/bin/
 RUN chmod +x /usr/local/bin/*.sh
 
+# Set environment variables
+ENV NGINX_LOG_LEVEL=info
+
 # Expose ports
 EXPOSE 80 443
 
